@@ -27,6 +27,7 @@
 
 (package 
  (name rocq-equations-hott)
+ (allow_empty)
  (synopsis "A function definition package for Rocq - HoTT variant")
  (description "Equations is a function definition plugin for Rocq, that allows the \
   definition of functions by dependent pattern-matching and well-founded, \
