@@ -2,6 +2,6 @@
  (name Equations.HoTT)
  (package rocq-equations-hott)
  (modules :standard)
- (theories Equations HoTT)
+ (theories Equations)
  (plugins rocq-runtime.plugins.extraction rocq-equations.plugin)
  (flags ("-noinit" "-indices-matter")))
