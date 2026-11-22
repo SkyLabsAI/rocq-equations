@@ -1,7 +1,7 @@
 (rocq.theory
+ (public_name rocq-equations.type)
  ; This determines the -R flag
  (name Equations.Type)
- (package rocq-equations)
  (synopsis "Equations Plugin")
- (theories Stdlib Equations)
+ (theories rocq-stdlib rocq-equations.core)
  (modules :standard))

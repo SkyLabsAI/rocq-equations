@@ -1,7 +1,8 @@
 (rocq.theory
+ (public_name rocq-equations.core)
  ; This determines the -R flag
  (name Equations)
- (package rocq-equations)
  (synopsis "Equations Plugin")
- (plugins rocq-runtime.plugins.extraction rocq-equations.plugin)
+ (plugins rocq-equations.plugin)
+ (theories rocq-core)
  (modules :standard))

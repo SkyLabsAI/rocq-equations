@@ -334,7 +334,7 @@ let free_vars_of_constr_expr env sigma fid c =
              else l
            | Globnames.Abbrev _ -> l
          with Not_found -> Id.Set.add id l)
-    | { CAst.v = CNotation (_, {ntn_entry = InConstrEntry; ntn_key = "?( _ )"}, _) } -> l
+    | { CAst.v = CNotation (_,(InConstrEntry, "?( _ )"), _) } -> l
     | c -> fold_constr_expr_with_binders (fun a l -> a::l) aux bdvars l c
   in aux [] Id.Set.empty c
 
@@ -625,7 +625,7 @@ let interp_eqn env sigma notations p ~avoid eqn =
     | Empty i -> Empty i
   and interp_wheres avoid w notations =
     let interp_where (((loc,id),decl,nested,b,t,reca) as p,eqns) =
-      Dumpglob.dump_reference ?loc (Id.to_string id) Dumpglob.Recursive;
+      Dumpglob.dump_reference ?loc "<>" (Id.to_string id) "def";
       p, map (aux2 notations avoid) eqns
     in List.map interp_where w
   and interp_constr_expr notations (avoid : Id.Set.t) ?loc c =
