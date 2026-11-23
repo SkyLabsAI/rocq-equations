@@ -4,6 +4,10 @@
  (name Equations.TestSuite)
  (synopsis "Equations Plugin Tests")
  (plugins rocq-runtime.plugins.extraction)
- (theories rocq-equations.prop rocq-equations.type))
+ (theories
+  rocq-equations.prop
+  rocq-equations.type
+  rocq-equations.core
+  rocq-stdlib))
 
 (include_subdirs no)

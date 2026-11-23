@@ -4,5 +4,4 @@
  (public_name rocq-equations.core)
  (synopsis "Equations Plugin")
  (plugins rocq-equations.plugin)
- (theories rocq-core)
  (modules :standard))
